@@ -1,0 +1,143 @@
+/* all dom */
+*{
+	padding: 0;
+	margin: 0;
+	border: none;
+	font-size: 1.5625vw;
+	font-family: "Microsoft YaHei";
+}
+html,
+body{
+	width: 100%;
+	height: 100%;
+}
+/* all dom --end*/ 
+
+/* music -start-*/ 
+#music{
+	position: fixed;
+	top: 3vh;
+	right: 4vw;
+	z-index: 101;
+
+	width: 15vw;
+	height: 15vw;
+	border: 4px solid #ef1639;
+	border-radius: 50%;
+	background-color: #fff;
+}
+#music > img:first-of-type{
+	position:absolute;
+	top: 24%;
+	right: 2.5%;
+	width: 28.421%;
+	z-index:102;
+}
+#music > img:last-of-type{
+	position:absolute;
+	top:0;
+	left:0;
+	bottom:0;
+	right:0;
+	width:79%;
+	margin:auto;
+}
+/* music -end-*/ 
+
+/* page -start- */
+.page{
+	width:100%;
+	height:100%;
+}
+.page > .bg{
+	position:absolute;
+	width:100%;
+	height:100%;
+
+	z-index:-1;
+}
+/* page -end- */
+/* page1 -start-*/ 
+#page1 > .bg{
+	background-image: url(../images/p1_bg.jpg);
+	background-size: 100%;
+}
+#page1 > .p1_lentern{
+	top: -2.5%;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	width: 45vw;
+	height:71.2vh;
+	margin: auto;
+	font-size:3.506rem;
+	padding-top:28vh;
+
+	background-image: url(../images/p1_lantern.png);
+	background-size:100%;
+
+	text-align: center;
+	box-sizing: border-box;
+}
+#page1 > .p1_lentern::before{
+	position:absolute;
+	left:0;
+	top:-34%;
+	bottom:0;
+	right:0;
+	border:0;
+	margin:auto;
+	height:30vw;
+	width:30vw;
+
+	z-index:-1;
+	content: "";
+
+	background-color:#555;
+
+	opacity: 0.5;
+
+	box-shadow: 0 0 10vw 10vw #555;
+	border-radius:50%;
+}
+#page1 > .p1_imooc {
+	position:absolute;
+	left:0;
+	right:0;
+	bottom: 9vh;
+	margin:auto;
+
+	background-image:url(../images/p1_imooc.png);
+	background-size:100%;
+
+	width:27.656vw;
+	height:18.63vh;
+}
+#page1 > .p1_words {
+	position:absolute;
+	left:0;
+	right:0;
+	bottom: 5vh;
+	margin:auto;
+
+	text-align:center;
+	color: #000;
+
+	font-size: 2.1rem;
+}
+/* page1 -end-*/
+
+/* page2 -start-*/ 
+#page2 > .bg{
+	background-image: url(../images/p2_bg.jpg);
+	background-size: 100%;
+}
+/* page2 -end-*/
+
+/* page3 -start-*/ 
+#page3 > .bg{
+	background-image: url(../images/p3_bg.jpg);
+	background-size: 100%;
+}
+/* page3 -end-*/ 
