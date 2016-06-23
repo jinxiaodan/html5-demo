@@ -42,10 +42,26 @@ body{
 	width:79%;
 	margin:auto;
 }
+#music > img.play{
+	-webkit-animation: music_play 3s linear infinite;
+	animation: music_play 3s linear infinite;
+}
+@keyframes music_play{
+	0% {
+			 	transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+	}
+	100% {
+				transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+	}
+}
+
 /* music -end-*/ 
 
 /* page -start- */
 .page{
+	position: relative;
 	width:100%;
 	height:100%;
 }
@@ -100,6 +116,20 @@ body{
 
 	box-shadow: 0 0 10vw 10vw #555;
 	border-radius:50%;
+	-webkit-animation: lentern 0.5s infinite alternate;
+	animation: lentern 0.5s infinite alternate;
+}
+@keyframes lentern {
+	0% {
+		opacity: 0.5;
+		-webkit-transform: scale(.8);
+		transform: scale(.8);
+	}
+	100% {
+		opacity: 1;
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
 }
 #page1 > .p1_imooc {
 	position:absolute;
@@ -133,11 +163,179 @@ body{
 	background-image: url(../images/p2_bg.jpg);
 	background-size: 100%;
 }
+#page2 > .p2_circle {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	background-image:url(../images/p2_circle_outer.png);
+	background-size: 100%;
+	width: 59.357vw;
+	height: 59.357vw;
+	-webkit-animation: out_circle 3S linear 1S infinite;
+	animation: out_circle 3S linear 1S infinite;
+} 
+@keyframes out_circle{
+	0% {
+		transform: rotate(0deg);
+		-webkit-transform:rotate(0deg);
+	}
+	100% {
+		transform: rotate(-1080deg);
+		-webkit-transform:rotate(-1080deg);
+	}
+}
+#page2 > .p2_circle::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+
+	content: "";
+
+	background-image:url(../images/p2_circle_middle.png);
+	background-size: 100%;
+	width: 45.625vw;
+	height: 45.625vw;
+	-webkit-animation: middle_circle 3S linear 1S infinite;
+	animation: middle_circle 3S linear 1S infinite;
+} 
+@keyframes middle_circle{
+	0% {
+		transform: rotate(0deg);
+		-webkit-transform:rotate(0deg);
+	}
+	100% {
+		transform: rotate(-720deg);
+		-webkit-transform:rotate(-720deg);
+	}
+}
+#page2 > .p2_circle::after {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+
+	content: "";
+
+	background-image:url(../images/p2_circle_inner.png);
+	background-size: 100%;
+	width: 39.937vw;
+	height: 39.937vw;
+	-webkit-animation: inner_circle 3S linear 2S infinite;
+	animation: inner_circle 3S linear 2S infinite;
+} 
+@keyframes inner_circle{
+	0% {
+		transform: rotate(0deg);
+		-webkit-transform:rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+		-webkit-transform:rotate(-360deg);
+	}
+}
+#page2 > .p2_2016 {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+
+	background-image: url(../images//p2_2016.png);
+	background-size: 100%;
+	width: 27.5vw;
+	height: 6.25vh;
+}
 /* page2 -end-*/
 
 /* page3 -start-*/ 
 #page3 > .bg{
 	background-image: url(../images/p3_bg.jpg);
 	background-size: 100%;
+}
+#page3 > .p3_logo {
+	position: absolute;
+	top:19.82vw;
+	right: 0;
+	left: 0;
+	margin: auto;
+
+	background-image: url(../images/p3_logo.png);
+	background-size: 100%;
+
+	width: 34.6875vw;
+	height:6.375vh;
+}
+#page3 > .p3_title {
+	position: absolute;
+	top:21vh;
+	right: 0;
+	left: 0;
+	margin: auto;
+
+	background-image: url(../images/p3_title.png);
+	background-size: 100%;
+
+	width: 48.125vw;
+	height:50vh;
+	-webkit-animation: name duration timing-function delay iteration-count direction fill-mode;
+	-o-animation: name duration timing-function delay iteration-count direction fill-mode;
+	animation: name duration timing-function delay iteration-count direction fill-mode;
+}
+#page3 > .p3_couplet_first {
+	position: absolute;
+	top:25.38vh;
+	right: 3.75vw;
+
+	background-image: url(../images/p3_couplet_first.png);
+	background-size: 100%;
+
+	width: 22.8125vw;
+	height:41.652vh;
+}
+#page3 > .p3_couplet_second {
+	position: absolute;
+	top:25.38vh;
+	left: 3.75vw;
+	
+	background-image: url(../images/p3_couplet_second.png);
+	background-size: 100%;
+
+	width: 22.8125vw;
+	height:41.652vh;
+}
+#page3 > .p3_blessing {
+	position: absolute;
+	right: 0;
+	bottom: 10vw;
+	left: 0;
+
+	margin: auto;
+
+	background-image: url(../images/p3_blessing.png);
+	background-size: 100%;
+
+	width: 32vw;
+	height: 32vw;
+	-webkit-animation: blessing 3S linear infinite;
+	animation: blessing 3S linear infinite;
+} 
+@keyframes blessing{
+	0% {
+		transform: rotate(0deg);
+		-webkit-transform:rotate(0deg);
+	}
+	100% {
+		transform: rotate(-360deg);
+		-webkit-transform:rotate(-360deg);
+	}
 }
 /* page3 -end-*/ 
